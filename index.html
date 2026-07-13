@@ -9,7 +9,12 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Mi Catálogo Online</title>
+   <title>Kas Deco Home | Catálogo Online</title>
+
+   <meta
+    name="description"
+    content="Catálogo online de Kas Deco Home. Elegí tus productos y realizá tu pedido por WhatsApp."
+>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -47,7 +52,7 @@
 
     <!-- Contenido principal -->
    
-    <main class="max-w-2xl min-h-screen mx-auto bg-[#FFFDFC] pb-96">
+    <main class="max-w-2xl min-h-screen mx-auto bg-[#FFFDFC] pb-56">
 
         <!-- Encabezado -->
         <header
@@ -180,7 +185,7 @@
                 class="mb-3 space-y-2 overflow-y-auto max-h-28"
             >
                 <p class="py-1 text-sm text-center text-slate-400">
-                    Todavía no agregaste productos
+                    Tu carrito está vacio. 
                 </p>
             </div>
 
@@ -210,6 +215,9 @@
                 <span>💬</span>
                 Enviar pedido por WhatsApp
             </button>
+            <p class="mt-2 text-xs text-center text-[#765E4E]">
+               Precios y disponibilidad sujetos a confirmación por WhatsApp.
+            </p>
 
 
 
@@ -500,7 +508,7 @@
             if (productosCarrito.length === 0) {
                 detalleCarrito.innerHTML = `
                     <p class="py-3 text-sm text-center text-slate-400">
-                        Todavía no agregaste productos
+                        Tu carrito está vacío. 
                     </p>
                 `;
 
@@ -628,8 +636,10 @@
     }
 
     let mensaje =
-        "¡Hola! Quiero realizar un pedido en Kas Deco Home 🛍️\n\n" +
+        "¡Hola! Quiero realizar un pedido en Kas Deco Home 🛍️!\n\n" +
         "*Detalle del pedido*\n\n";
+
+    
 
     productosCarrito.forEach(producto => {
         const subtotal =
