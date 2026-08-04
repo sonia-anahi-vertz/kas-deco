@@ -141,7 +141,7 @@ function enviarWhatsApp() {
   }
 
   let mensaje =
-    "¡Hola! Quiero realizar un pedido en Kas Deco Home 🛍️!\n\n" +
+    `¡Hola! Quiero realizar un pedido en ${CONFIG.nombre} 🛍️!\n\n` +
     "*Detalle del pedido*\n\n";
 
   productosCarrito.forEach((producto) => {
@@ -165,7 +165,7 @@ function enviarWhatsApp() {
     "Localidad:\n" +
     "¿Retiro o envío?";
 
-  const numeroWhatsApp = "5491162741684";
+  const numeroWhatsApp = CONFIG.telefono;
 
   const enlaceWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
 
